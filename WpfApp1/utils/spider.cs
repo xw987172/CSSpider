@@ -35,7 +35,7 @@ namespace WpfApp1.utils
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(Url);
             req.MaximumAutomaticRedirections = 4;
             //留白  报头
-            req.Timeout = 1;
+            req.Timeout = 50;
             try
             {
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
@@ -48,8 +48,8 @@ namespace WpfApp1.utils
                 resp.Close();
                 return htmlstr;
             }
-            catch (Exception e) {
-                return e.ToString();
+            catch (System.Net.WebException) {
+                return "timeout 超时！";
             }
         }
         private string cookies;

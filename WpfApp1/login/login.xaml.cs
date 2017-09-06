@@ -34,8 +34,14 @@ namespace WpfApp1.login
             //string passwd = this.txt_Pwd.Password;
             IntPtr p = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(this.txt_Pwd.SecurePassword);
             string passwd = System.Runtime.InteropServices.Marshal.PtrToStringBSTR(p);
-            MessageBox.Show(user);
-            MessageBox.Show(passwd);
+            if (String.IsNullOrEmpty(user)) {
+                MessageBox.Show("用户名不能为空");
+                return;
+            }
+            if (String.IsNullOrEmpty(passwd) | passwd == "123456") {
+                MessageBox.Show("密码不能为空，或过于简单");
+                return;
+            }
             MainWindow mainwindow = new MainWindow();
             this.Close();
             mainwindow.Show();
