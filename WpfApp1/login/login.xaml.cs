@@ -26,8 +26,12 @@ namespace WpfApp1.login
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //todo
+            MessageBox.Show("confirm?");
         }
-
+        private void reclosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //todo
+        }
 
         private void Window_Closed(object sender, EventArgs e)
         {
