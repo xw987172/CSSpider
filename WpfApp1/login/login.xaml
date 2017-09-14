@@ -7,6 +7,7 @@
         WindowStartupLocation="CenterScreen"
         FocusManager.FocusedElement="{Binding ElementName=txt_userName}"
         Loaded="Window_Loaded"
+        Closed="Window_Closed"
         Title="登录" Height="300" Width="400">
     <Grid>
         <Grid.RowDefinitions>

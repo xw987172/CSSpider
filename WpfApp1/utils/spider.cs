@@ -33,9 +33,9 @@ namespace WpfApp1.utils
         private string headers;
         public string crawler() {
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(Url);
-            req.MaximumAutomaticRedirections = 4;
+            //req.MaximumAutomaticRedirections = 4;
             //留白  报头
-            req.Timeout = 50;
+            //req.Timeout = 50;
             try
             {
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();

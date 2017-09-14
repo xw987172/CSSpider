@@ -22,10 +22,18 @@ namespace WpfApp1.login
         {
             InitializeComponent();
         }
-
+        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //todo
+        }
 
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            this.Close();
+            //Application.Current.Shutdown();#关闭窗体后仍然有进程 重大error
+            Environment.Exit(0);
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
@@ -50,9 +58,10 @@ namespace WpfApp1.login
         private void btn_loginout_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            Application.Current.Shutdown();
-            //Environment.Exit(0);
+            //Application.Current.Shutdown();#关闭窗体后仍然有进程 重大error
+            Environment.Exit(0);
         }
+
 
         //private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         //{
