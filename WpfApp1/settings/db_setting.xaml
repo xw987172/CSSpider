@@ -10,14 +10,11 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition>
-                
-            </RowDefinition>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition>
-
-            </ColumnDefinition>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
     </Grid>
 </Page>
