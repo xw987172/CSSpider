@@ -24,5 +24,21 @@ namespace WpfApp1.settings
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string host = this.host.Text;
+            string port = this.port.Text;
+            string user = this.user.Text;
+            string passwd = this.passwd.Text;
+            string[] info = { host, port, user, passwd };
+            try
+            {
+                System.IO.File.WriteAllLines(@"db_config.txt", info);
+            }
+            finally {
+                MessageBox.Show("保存成功");
+            }
+        }
     }
 }

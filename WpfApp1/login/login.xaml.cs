@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1.dol;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 namespace WpfApp1.login
 {
     /// <summary>
@@ -33,12 +37,12 @@ namespace WpfApp1.login
             //todo
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            this.Close();
-            //Application.Current.Shutdown();#关闭窗体后仍然有进程 重大error
-            Environment.Exit(0);
-        }
+        //private void Window_Closed(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //    Application.Current.Shutdown();//关闭窗体后仍然有进程 重大error
+        //    //Environment.Exit(0);
+        //}
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
@@ -54,6 +58,11 @@ namespace WpfApp1.login
                 MessageBox.Show("密码不能为空，或过于简单");
                 return;
             }
+            //dol.dol d= new dol.dol("test");
+            //MySqlDataReader data= d.getmysqlread("show tables");
+            //while (data.Read()) {
+            //    MessageBox.Show(data.GetString(0));
+            //}
             MainWindow mainwindow = new MainWindow();
             this.Close();
             mainwindow.Show();

@@ -35,5 +35,11 @@ namespace WpfApp1
             spider sp = new spider();
             this.frmMain.Navigate(sp);
         }
+
+        private void main_close(object sender, EventArgs e)
+        {
+            this.Close();
+            Environment.Exit(0);
+        }
     }
 }

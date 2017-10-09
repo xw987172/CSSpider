@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Diagnostics;
 namespace test
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Func<int, int, int> addi = (x, y) => x * y;
-            int a = addi(2, 3);
-            Console.WriteLine(a);
+            int i;
+            string text;
+            text = string.Empty;
+            for (i = 0; i < 5; i++)
+            {
+                text = string.Format("line {0},{1}", Convert.ToString(i),"han");
+            }
+            Debug.WriteLine("debug 1","Main");
+            Trace.WriteLine("debug 1", "Main");
+            Console.WriteLine(text);
         }
     }
 }
