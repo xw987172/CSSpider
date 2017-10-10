@@ -14,13 +14,19 @@ namespace WpfApp1.dol
         private string port;
         private string user;
         private string passwd;
-        private string charset ="utf8";
+        //private string charset ="utf8";
         private MySqlConnection myCon;
         public dol(string db) {
             this.get_config();
             myCon = this.connect(db);
         }
-
+        public dol()
+        {
+            this.host = ConfigurationManager.AppSettings["server"];
+            this.user = ConfigurationManager.AppSettings["uid"];
+            this.passwd = ConfigurationManager.AppSettings["pwd"];
+            myCon = this.connect("busi_control");
+        }
         private void get_config() {
             /*动态获取数据库连接信息*/
             if (File.Exists(@"db_config.txt"))

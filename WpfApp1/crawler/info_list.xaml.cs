@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
+using System.Collections.ObjectModel;
+using WpfApp1.dol;
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace WpfApp1.crawler
 {
@@ -23,6 +14,28 @@ namespace WpfApp1.crawler
         public info_list()
         {
             InitializeComponent();
+            ObservableCollection<Member> memberdata = new ObservableCollection<Member>();
+            dol.dol dl = new dol.dol();
+            //dl.getmysqlcom("insert into crawl_info values(1,'crawl1','','','',1)");
+            MySqlDataReader md = dl.getmysqlread("select * from crawl_info");
+            while (md.Read())
+            {
+                memberdata.Add(new Member()
+                {
+                    busi = md.GetString(1),
+                    dev = md.GetString(2),
+                    logic = md.GetString(3),
+                    locate = md.GetString(4),
+                });
+
+            }
+            info_list_dg.DataContext = memberdata;
         }
+    }
+    public class Member {
+        public string busi { get; set; }
+        public string dev { get; set; }
+        public string logic { get; set; }
+        public string locate { get; set; }
     }
 }

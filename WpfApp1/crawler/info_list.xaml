@@ -7,8 +7,14 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="info_list">
-
     <Grid>
-        
+        <DataGrid x:Name="info_list_dg" ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionUnit="Cell" SelectionMode="Extended" IsReadOnly="True">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="业务名称" Width="25*" Binding="{Binding busi}"></DataGridTextColumn>
+            <DataGridTextColumn Header="开发人员" Width="25*" Binding="{Binding dev}"></DataGridTextColumn>
+            <DataGridTextColumn Header="业务逻辑" Width="25*" Binding="{Binding logic}"></DataGridTextColumn>
+            <DataGridTextColumn Header="代码位置" Width="25*" Binding="{Binding locate}"></DataGridTextColumn>
+        </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>
