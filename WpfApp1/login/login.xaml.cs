@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,9 +64,23 @@ namespace WpfApp1.login
             //while (data.Read()) {
             //    MessageBox.Show(data.GetString(0));
             //}
-            MainWindow mainwindow = new MainWindow();
-            this.Close();
-            mainwindow.Show();
+            string user_info = string.Format("{0}\t{1}", user, passwd);
+            if (File.Exists(@"../../user.txt"))
+            {
+                StreamReader sr = new StreamReader(@"../../user.txt", Encoding.Default);
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line.ToString() == user_info) {
+                        MessageBox.Show("congurations");
+                        MainWindow mainwindow = new MainWindow();
+                        this.Close();
+                        mainwindow.Show();
+                        break;
+                    }
+                    MessageBox.Show(line.ToString()+user_info);
+                }
+            }
         }
 
         private void btn_loginout_Click(object sender, RoutedEventArgs e)

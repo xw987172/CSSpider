@@ -58,6 +58,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="crawler\info_add.xaml.cs">
+      <DependentUpon>info_add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="crawler\info_leader.xaml.cs">
+      <DependentUpon>info_leader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="crawler\info_list.xaml.cs">
+      <DependentUpon>info_list.xaml</DependentUpon>
+    </Compile>
     <Compile Include="dol\dol.cs" />
     <Compile Include="login\login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
@@ -66,6 +75,18 @@
       <DependentUpon>db_setting.xaml</DependentUpon>
     </Compile>
     <Compile Include="utils\spider.cs" />
+    <Page Include="crawler\info_add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="crawler\info_leader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="crawler\info_list.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="crawler\spider.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

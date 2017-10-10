@@ -8,7 +8,8 @@
             <MenuItem Header="Files"/>
             <MenuItem Header="爬虫">
                 <Button Content="爬虫测试" Click="crawl_test"/>
-                <Button Content="爬虫任务"/>
+                <Button Content="爬虫任务(信息)" Click="crawl_info"/>
+                <Button Content="爬虫任务(执行)"/>
             </MenuItem>
             <MenuItem Header="设置">
                 <Button Content="数据库设置" Click="db_setting"/>

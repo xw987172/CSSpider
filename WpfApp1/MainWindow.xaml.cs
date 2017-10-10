@@ -41,5 +41,11 @@ namespace WpfApp1
             this.Close();
             Environment.Exit(0);
         }
+
+        private void crawl_info(object sender, RoutedEventArgs e)
+        {
+            info_leader il = new info_leader();
+            this.frmMain.Navigate(il);
+        }
     }
 }
