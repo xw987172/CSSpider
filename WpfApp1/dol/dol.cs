@@ -49,7 +49,7 @@ namespace WpfApp1.dol
 
         private MySqlConnection connect(string db) {
             /*连接数据库*/
-            string info = "server={0};uid ={1};password={2};database={3}";
+            string info = "server={0};uid ={1};password={2};database={3};Charset=utf8";
             string cinfo = string.Format(info,this.host,this.user,this.passwd,db);
             try {
                 MySqlConnection myCon = new MySqlConnection(cinfo);

@@ -7,13 +7,35 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="info_leader">
-
-    <TabControl>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel VerticalAlignment="Center">
+            <Button Click="info_add">添加</Button>
+            <Button Click="info_list">查看</Button>
+        </WrapPanel>
+        <Frame x:Name="frmInfo" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+    <!--<TabControl>
         <TabItem Header="添加">
+            <TabItem.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF05B877" Offset="1"/>
+                </LinearGradientBrush>
+            </TabItem.OpacityMask>
             <Frame Source="info_add.xaml"></Frame>
         </TabItem>
         <TabItem Header="查看">
-            <Frame Source="info_list.xaml"></Frame>
+            <TabItem.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TabItem.OpacityMask>
+            <Frame Name="list" Source="info_list.xaml"></Frame>
         </TabItem>
-    </TabControl>
+    </TabControl>-->
 </Page>
