@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.settings;
 using WpfApp1.crawler;
+using WpfApp1.dbs;
 namespace WpfApp1
 {
     /// <summary>
@@ -34,6 +35,11 @@ namespace WpfApp1
         {
             spider sp = new spider();
             this.frmMain.Navigate(sp);
+        }
+
+        private void cross_dbs(object sender, RoutedEventArgs e) {
+            cross cr = new cross();
+            this.frmMain.Navigate(cr);
         }
 
         private void main_close(object sender, EventArgs e)

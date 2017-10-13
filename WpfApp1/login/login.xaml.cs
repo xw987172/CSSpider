@@ -31,7 +31,7 @@ namespace WpfApp1.login
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //todo
-            MessageBox.Show("confirm?");
+            //MessageBox.Show("confirm?");
         }
         private void reclosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -72,7 +72,7 @@ namespace WpfApp1.login
                 while ((line = sr.ReadLine()) != null)
                 {
                     if (line.ToString() == user_info) {
-                        MessageBox.Show("congurations");
+                        //MessageBox.Show("congurations");
                         MainWindow mainwindow = new MainWindow();
                         this.Close();
                         mainwindow.Show();

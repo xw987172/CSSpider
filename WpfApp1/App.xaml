@@ -5,6 +5,6 @@
              ShutdownMode="OnExplicitShutdown"
              StartupUri="login/login.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>

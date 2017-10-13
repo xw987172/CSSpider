@@ -67,6 +67,12 @@
     <Compile Include="crawler\info_list.xaml.cs">
       <DependentUpon>info_list.xaml</DependentUpon>
     </Compile>
+    <Compile Include="dbs\cross.xaml.cs">
+      <DependentUpon>cross.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dbs\single.xaml.cs">
+      <DependentUpon>single.xaml</DependentUpon>
+    </Compile>
     <Compile Include="dol\dol.cs" />
     <Compile Include="login\login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
@@ -88,6 +94,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="crawler\spider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dbs\cross.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dbs\single.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

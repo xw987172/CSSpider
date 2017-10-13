@@ -11,6 +11,9 @@
                 <Button Content="爬虫任务(信息)" Click="crawl_info"/>
                 <Button Content="爬虫任务(执行)"/>
             </MenuItem>
+            <MenuItem Header="数据库管理">
+                <Button Content="跨库查询" Click="cross_dbs"/>
+            </MenuItem>
             <MenuItem Header="设置">
                 <Button Content="数据库设置" Click="db_setting"/>
                 <Button Content="其他设置"/>

@@ -28,13 +28,14 @@ namespace WpfApp1.settings
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string host = this.host.Text;
+            string conn_name = this.conn_name.Text;
             string port = this.port.Text;
             string user = this.user.Text;
             string passwd = this.passwd.Text;
             string[] info = { host, port, user, passwd };
             try
             {
-                System.IO.File.WriteAllLines(@"db_config.txt", info);
+                System.IO.File.WriteAllLines(string.Format(@"{0}_db.txt",conn_name), info);
             }
             finally {
                 MessageBox.Show("保存成功");
