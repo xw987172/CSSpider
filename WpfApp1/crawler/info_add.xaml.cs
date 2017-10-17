@@ -36,7 +36,7 @@ namespace WpfApp1.crawler
             string dev = this.dev.Text.Trim();
             string logic = this.logic.Text.Trim();
             string locate = this.locate.Text.Trim();
-            string sql = string.Format("insert into crawl_info(busi,dev,logic,locate,status) values('{0}','{1}','{2}','{3}',{4})",busi,dev,logic,locate,2);
+            string sql = string.Format("insert into busi_control.crawl_info(busi,dev,logic,locate,status) values('{0}','{1}','{2}','{3}',{4})",busi,dev,logic,locate,2);
             dol.dol d = new dol.dol();
             try
             {

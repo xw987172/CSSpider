@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using static WpfApp1.utils.static_info;
 namespace WpfApp1.settings
 {
     /// <summary>
@@ -23,6 +23,10 @@ namespace WpfApp1.settings
         public db_setting()
         {
             InitializeComponent();
+            this.Background = new ImageBrush
+            {
+                ImageSource = new BitmapImage(new Uri(img_path + "back.jpg", UriKind.Relative))
+            };
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,7 +39,7 @@ namespace WpfApp1.settings
             string[] info = { host, port, user, passwd };
             try
             {
-                System.IO.File.WriteAllLines(string.Format(@"{0}_db.txt",conn_name), info);
+                System.IO.File.WriteAllLines(string.Format(@"./dbs/{0}_db.txt",conn_name), info);
             }
             finally {
                 MessageBox.Show("保存成功");

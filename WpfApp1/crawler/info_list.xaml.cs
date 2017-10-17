@@ -28,7 +28,7 @@ namespace WpfApp1.crawler
             ObservableCollection<Member> memberdata = new ObservableCollection<Member>();
             dol.dol dl = new dol.dol();
             //dl.getmysqlcom("insert into crawl_info values(1,'crawl1','','','',1)");
-            MySqlDataReader md = dl.getmysqlread("select * from crawl_info");
+            MySqlDataReader md = dl.getmysqlread("select * from busi_control.crawl_info");
             while (md.Read())
             {
                 memberdata.Add(new Member()
@@ -59,7 +59,7 @@ namespace WpfApp1.crawler
                 }
             }
             string all_id = string.Join(",",ids);
-            string sql = string.Format("delete from crawl_info where id in ({0})", all_id);
+            string sql = string.Format("delete from busi_control.crawl_info where id in ({0})", all_id);
             dol.dol dl = new dol.dol();
             try
             {

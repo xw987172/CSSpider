@@ -80,6 +80,7 @@
     <Compile Include="settings\db_setting.xaml.cs">
       <DependentUpon>db_setting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="utils\helpers.cs" />
     <Compile Include="utils\spider.cs" />
     <Page Include="crawler\info_add.xaml">
       <SubType>Designer</SubType>
@@ -162,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <DesignDataWithDesignTimeCreatableTypes Include="Resource\img\back.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

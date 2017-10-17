@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:WpfApp1.crawler"
+      Background="Transparent"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="info_list">
@@ -12,7 +12,7 @@
             <RowDefinition Height="90*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="info_list_dg" Grid.Row="0" ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionUnit="FullRow" SelectionMode="Extended" IsReadOnly="True">
+        <DataGrid Background="Transparent" x:Name="info_list_dg" Grid.Row="0" ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionUnit="FullRow" SelectionMode="Extended" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="id" Header="id" Width="25*" Visibility="Hidden" Binding="{Binding id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="业务名称" Width="25*" Binding="{Binding busi}"></DataGridTextColumn>

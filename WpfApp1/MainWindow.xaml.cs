@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 using WpfApp1.settings;
 using WpfApp1.crawler;
 using WpfApp1.dbs;
+using static WpfApp1.utils.static_info;
+using System.Diagnostics;
+
 namespace WpfApp1
 {
     /// <summary>
@@ -24,6 +27,11 @@ namespace WpfApp1
     {
         public MainWindow()
         {
+            Debug.WriteLine(img_path + "back.jpg");
+            this.Background = new ImageBrush
+            {
+                ImageSource = new BitmapImage(new Uri(img_path+"back.jpg",UriKind.Relative))
+            };
             InitializeComponent();
         }
         private void db_setting(object sender,RoutedEventArgs e) {
