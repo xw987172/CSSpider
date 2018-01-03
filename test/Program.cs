@@ -19,7 +19,7 @@ namespace test
             }
             Debug.WriteLine("debug 1","Main");
             Trace.WriteLine("debug 1", "Main");
-            Console.WriteLine(text);
+            Console.WriteLine(text);#111
         }
     }
 }
